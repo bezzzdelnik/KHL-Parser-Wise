@@ -1,0 +1,42 @@
+{
+  "name": "parser",
+  "version": "1.1.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-win": "electron-builder -w"
+  },
+  "keywords": [],
+  "author": "Aleksey Talyzin",
+  "license": "ISC",
+  "dependencies": {
+    "@electron/remote": "^2.0.1",
+    "fs-extra": "^10.0.0",
+    "puppeteer": "^10.4.0"
+  },
+  "devDependencies": {
+    "electron": "^15.1.1",
+    "electron-builder": "^22.11.7"
+  },
+  "build": {
+    "productName": "KHL Parser Wise",
+    "appId": "parser",
+    "electronVersion": "15.1.1",
+    "win": {
+      "target": [
+        "nsis",
+        "portable",
+        "zip"
+      ],
+      "icon": "./img/icon.png"
+    },
+    "portable": {
+      "artifactName": "KHLParser.exe"
+    },
+    "directories": {
+      "output": "electron/dist",
+      "buildResources": "build"
+    }
+  }
+}

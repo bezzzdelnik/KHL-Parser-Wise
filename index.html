@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<!-- <meta http-equiv="Content-Security-Policy" 
+          content="script-src 'self' 'unsafe-inline';" /> -->
+	<link rel="stylesheet" href="css/style.css">
+	<title>KHL parser</title>
+</head>
+
+<body>
+	<div id="header">
+		<table width="900" border="0" align="center">
+			<tbody>
+				<tr>
+					<td width="300" align="left" valign="middle"><img src="./img/2016.png" alt="" /></td>
+					<td width="600" align="center" valign="middle" style="text-align: center">KHL parser <br>Умная шайба
+					</td>
+					<td width="300" align="right" valign="middle"><img src="./img/match.png" alt=""></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id="content">
+		<label for="matchID">MatchID -</label>
+		<input id="matchID" type="text" size="10" oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+			style="text-align:center;" disabled>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+		<label for="updateInterval">Update interval sec - </label>
+		<input id="updateInterval" type="text" size="3"
+			oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" value="5"
+			style="text-align:center;">
+		<p></p>
+		<table border="0" align="center" cellpadding="2">
+			<tbody>
+				<tr>
+					<td width="130"><button id="updateButton">Start update</button></td>
+					<td width="130"><button id="saveButton">Open file</button></td>
+					<td align="left"><label id="savePath" width="500">G:/DB/KHLParser/parseKHL.json</label></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id="log">
+		<label id="updatedTime">&nbsp;</label>
+		<p></p>
+		<table border="1" align="center" id="logTableA">
+			<thead>
+				<tr>
+					<th width="40" class="thAll">#</th>
+					<th width="300" class="thName">Имя</th>
+					<th width="40" class="thAll">Ш</th>
+					<th width="40" class="thAll">А</th>
+					<th width="40" class="thAll">О</th>
+					<th width="40" class="thAll">БВ</th>
+					<th width="60" class="thAll">Штр</th>
+					<th width="40" class="thAll">Вбр</th>
+					<th width="40" class="thAll">ВВбр</th>
+					<th width="70" class="thAll">%ВВбр</th>
+					<th width="40" class="thAll">БлБ</th>
+					<th width="40" class="thAll">СПр</th>
+					<th width="40" class="thAll">ФоП</th>
+					<th width="80" class="thAll">ВП(см)</th>
+					<th width="80" class="thAll">ВВА</th>
+					<th width="40" class="thAll">МС</th>
+					<th width="50" class="thAll">ПД</th>
+					<th width="50" class="thAll">СрС</th>
+					<th width="60" class="thAll">ДКШ</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+		<p></p>
+
+		<table border="1" align="center" id="logTableB">
+			<thead>
+				<tr>
+					<th width="40" class="thAll">#</th>
+					<th width="300" class="thName">Имя</th>
+					<th width="40" class="thAll">Ш</th>
+					<th width="40" class="thAll">А</th>
+					<th width="40" class="thAll">О</th>
+					<th width="40" class="thAll">БВ</th>
+					<th width="60" class="thAll">Штр</th>
+					<th width="40" class="thAll">Вбр</th>
+					<th width="40" class="thAll">ВВбр</th>
+					<th width="70" class="thAll">%ВВбр</th>
+					<th width="40" class="thAll">БлБ</th>
+					<th width="40" class="thAll">СПр</th>
+					<th width="40" class="thAll">ФоП</th>
+					<th width="80" class="thAll">ВП(см)</th>
+					<th width="80" class="thAll">ВВА</th>
+					<th width="40" class="thAll">МС</th>
+					<th width="50" class="thAll">ПД</th>
+					<th width="50" class="thAll">СрС</th>
+					<th width="60" class="thAll">ДКШ</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+	<div id="test"></div>
+	<script>
+		//   require('./parseKHL.js'), 
+		require('./renderer.js'),
+			require('./parseKHLPlayers.js')
+	</script>
+</body>
+
+</html>

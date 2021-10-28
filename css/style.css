@@ -1,0 +1,71 @@
+body {
+    background-color: #f2f2f2;
+    width: 1300px;
+    margin-bottom: 0px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+input {
+	background-color: #f2f2f2;
+}
+button {
+	width: 120px;
+    background-color: #717070;
+    color: white;
+    font-weight: bold;
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+    font-style: normal;
+}
+#header {
+    background-image: url("../img/bg.png");
+    text-align: center;
+    padding: 10px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    color: #CED4D8;
+    font-style: normal;
+    font-size: x-large;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    font-weight: lighter;
+}
+#content {
+    height: 80px;
+    padding: 10px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    text-align: center;
+    color: #222B2F;
+    background-color: #CED4D8;
+    font-weight: bold;
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+    font-style: normal;
+}
+#log {
+    height: 150px;
+    padding: 10px;
+    margin-left: auto;
+    text-align: center;
+    background-color: #f2f2f2;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#logTable {
+	color: #222B2F;
+	border-bottom-color: #B3B3B3;
+	border-bottom-color: #717070;
+}
+
+#savePath {
+	display: inline-block;
+	width: 400px;
+}
+#test {
+    text-align: center;
+    font-weight: bold;
+}
